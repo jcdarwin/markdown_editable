@@ -1,4 +1,4 @@
-# Serving editable markdown documents using a simple local server #
+# Serving editable markdown documents locally #
 
 ## Description ##
 This document explains how to set up a simple local server which can be used to serve [Markdown][md] documents that can be edited in the browser.
