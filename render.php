@@ -37,13 +37,18 @@ $requested = preg_replace('/\.php.*$/', '.php', $requested);
 // File (Markdown or otherwise) to read
 $md_source = $_SERVER['DOCUMENT_ROOT'] . $requested;
 
+$md_ext = preg_replace('/^.*\./', '', $md_source);
+
 // Path to use in link URLs
 $ht_path = dirname( $_SERVER['SCRIPT_NAME'] );
 
 // As we can't rely on $ht_path, use a setting from the ini file to determine the script home.
 $home = $settings['home'];
 
-if ( file_exists( $md_source ) ) {
+// Our allowable mardown extensions.
+$md_exts = array('markdown', 'mdown', 'md', 'mkd');
+
+if ( file_exists($md_source) && in_array($md_ext, $md_exts) ) {
 
   // if file name ended with text_suffix, show the original Markdown
   if ( $show_text ) {

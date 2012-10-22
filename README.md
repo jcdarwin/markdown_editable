@@ -57,6 +57,12 @@ The markdown documents will be editable in the browser, meaning that the browser
     Listening on http://localhost:8000
     Document root is /scripts/markdown
     Press Ctrl-C to quit.
+
+### At the browser ###
+* visit http://localhost:8080/[name of markdown document]
+* a markdown document is recognised by having an extension that is one of .markdown, .mdown, .md, or .mkd
+* click on the page to start editing
+* either click the "OK" button or use CTRL+S to save
    
 ## Credit ##
 
