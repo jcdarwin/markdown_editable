@@ -143,6 +143,7 @@ if ( file_exists($md_source) && in_array($md_ext, $md_exts) ) {
     if ( $settings['jeditable'] ) {
       $jeditable_scripts = <<<JEDITABLE
   <script src="lib/jquery-1.8.2.min.js" type="text/javascript"></script>
+  <script src="lib/jquery.hotkeys.js" type="text/javascript"></script>
   <script src="lib/jquery.jeditable.js" type="text/javascript"></script>
   <script>
        $(document).ready(function() {
@@ -218,10 +219,10 @@ HTML;
 
     if ( preg_match( "/load\.php$/", $requested ) ) {
       // Retrieve the Markdown and return.
-      require_once( $requested );
+      require_once( $home . $requested );
     } elseif ( preg_match( "/save\.php$/", $requested ) ) {
       // Save the Markdown.
-      require_once( $requested );
+      require_once( $home . $requested );
     } elseif ( preg_match( "/\.js$/", $requested ) ) {
       // We're after a javascript resource.
       header( "Content-type: application/javascript" );
