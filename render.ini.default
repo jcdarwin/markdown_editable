@@ -1,3 +1,4 @@
+; COPY THIS FILE AND RENAME TO render.ini
 ; generate a Table of Contents
 toc = 1
 ; start with the ToC hidden (ignored if toc isn't generated)
@@ -33,3 +34,6 @@ link_attrs[] = "author"
 ;  link_pattern = "http://www.mysite.tld/search/?q=%k:%v" ; search pattern
 ;  link_pattern = "/%k/%v" ; relative address
 ;  link_pattern = "/tags/%v" ; just use the value, ignore the attribute name
+home = "/scripts/markdown/"
+; use jEditable
+jeditable = 1
